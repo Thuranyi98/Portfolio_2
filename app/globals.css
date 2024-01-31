@@ -3,31 +3,209 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  background-color: #10172A;
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  --deg: 1;
+  --x: -50%;
+  --y: -50%;
+  --speed: 150ms;
+  /* fix for Chrome */
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+*,
+html {
+
+  scroll-behavior: smooth !important;
+}
+
+
+
+.head{
+  color: #ffffff;
+}
+
+.text{
+  color:#94A3B8;
+}
+
+.list{
+  color:#64748b;
+}
+.bloggg{
+  cursor: url('../public/assets/speech-bubble-comment-svgrepo-com.svg'), auto;
+}
+
+.glow {
+  background: #FBFF7A;
+  scale: 4;
+  z-index: -1;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: inset 0 0 140px 40px #1d377f9d, 0 0 140px 40px #1d377fa0, inset 0 0 270px 270px #1e3c8ecc;
+
+}
+
+.glossy{
+/* From https://css.glass */
+/* From https://css.glass */
+ border:1px solid transparent;
+ transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+
+.div {
+  position: absolute;
+    top: 23%;
+    left: 52%;
+    -webkit-transform: translate(var(--x, -50%), var(--y, -50%)) rotate(0deg);
+    transform: translate(var(--x, -50%), var(--y, -50%)) rotate(0deg);
+    font-size: 20vmin;
+    width: 3em;
+    height: 3em;
+    border-radius: 90% 95% 85% 105%;
+    background: #0f0;
+    mix-blend-mode: screen;
+    filter: hue-rotate(0deg);
+    -webkit-animation: wobble calc(var(--speed) * var(--t)) linear infinite;
+    animation: wobble calc(var(--speed) * var(--t)) linear infinite;
+    -webkit-transform-origin: -var(--y) -var(--x);
+    transform-origin: -var(--y) -var(--x);
+    -webkit-box-shadow: 0 0 0.5em 0.2em #000 inset, 0 0 0.15em 0 #fff;
+    box-shadow: 0 0 0.5em 0.2em #000 inset, 0 0 0.15em 0 #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 1.1;
+}
+
+.div::after {
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.div_one {
+  --x: -53%;
+  --y: -53%;
+  --t: 37;
+}
+
+.div_two {
+  --x: -47%;
+  --y: -52%;
+  --t: 58;
+}
+
+.div_three {
+  --x: -45%;
+  --y: -50%;
+  --t: 46;
+}
+
+.div_four{
+  --x: -53%;
+  --y: -45%;
+  --t: 72;
+}
+
+.div_five {
+  --x: -55%;
+  --y: -45%;
+  --t: 62;
+}
+
+@-webkit-keyframes wobble {
+  to {
+    filter: hue-rotate(360deg);
+    -webkit-transform: translate(var(--x), var(--y)) rotate(360deg);
+    transform: translate(var(--x), var(--y)) rotate(360deg);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes wobble {
+  to {
+    filter: hue-rotate(360deg);
+    -webkit-transform: translate(var(--x), var(--y)) rotate(360deg);
+    transform: translate(var(--x), var(--y)) rotate(360deg);
   }
 }
+
+.portal {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  background: radial-gradient(circle at 50% 35%, #334455f9, #000000eb);
+}
+
+.starwarintro {
+  top: 11%;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  transform: rotateX(30deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.looking {
+  width: 260px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+@media (min-width: 1024px) {
+  .glossy:hover {
+    background: rgba(187, 192, 197, 0.04);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.4px);
+    -webkit-backdrop-filter: blur(0.4px);
+    border: 1px solid rgba(187, 192, 197, 0.02);
+  }
+
+  .div {
+    top: 50%;
+  }
+
+
+  .starwarintro {
+    top: 25%;
+  }
+
+  .looking {
+    width: 400px;
+  }
+}
+
+.starwarpage{
+  margin:auto;
+  width:100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  position: absolute;
+  perspective: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
