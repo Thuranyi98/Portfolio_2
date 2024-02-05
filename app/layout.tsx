@@ -21,9 +21,7 @@ export default function RootLayout({
       <head>
 <link rel="preconnect" href="https://rsms.me/"/>
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
-  <script type="text/javascript">
-   const dd = Bidvertiser2091093 ;
-  </script>
+<script src="libs/data/sw.js" async/>
       </head>
       <body className={inter.className}>
         <Courser/>
