@@ -22,7 +22,7 @@ export default function RootLayout({
 <link rel="preconnect" href="https://rsms.me/"/>
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8030993684394945"
-    crossOrigin="anonymous"></script>
+          crossOrigin="anonymous"></script>
       </head>
       <body className={inter.className}>
         <Courser/>

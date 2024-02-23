@@ -6,6 +6,32 @@ import Link from 'next/link';
 
 function WorkCard() {
   return (
+   <>
+    <Link href={'https://smilaxglobal.com'} target='_blank' className='flex flex-col sm:flex-row items-start  group cursor-pointer glossy lg:p-5 rounded-lg drop-shadow-4xl justify-between  gap-[20px]'>
+        <div className='md:w-[25%] lg:w-[30%]'>
+            <p className='text font-[500]  text-[12px]'>JAN 2024 - Presence</p>
+        </div>
+        <div className='sm:w-[450px] md:w-[65%] lg:w-[70%] space-y-3'>
+               <Link href={'https://smilaxglobal.com'} target='_blank' className='head flex items-center group-hover:text-teal-300 cursor-pointer gap-2'>Senior Frontend . Smilax Global Co. ltd<MdOutlineArrowOutward /></Link>
+              <p className='text text-sm'>Crafting company website and frontend applications using microservices architecture. Proficient in handling HR web application modules, React.js, Next.js, Redux, TypeScript, React Query, and Docker to create robust and scalable solutions. Collaboration with UI/UX designers, backend developers, and project owner.</p>
+              <div className='flex gap-4'>
+            <Link href="https://smilaxglobal.com" target='_blank' className='flex   hover:text-teal-300 gap-1 head text-sm items-center'>
+                <CiLink/>Company Website
+            </Link>
+        </div>
+        <div className=' space-x-2 space-y-2 '>
+          <Button title='TypeScript'/>  
+          <Button title='React'/>  
+          <Button title='Next.js'/>  
+          <Button title='React Query'/>  
+          <Button title='FramerMotion'/>  
+          <Button title='Tailwind'/>  
+          <Button title='Redux'/>  
+          <Button title='Headless UI'/>  
+        </div>
+        </div>
+        
+    </Link>
     <Link href={'https://www.digitalengineeringtech.com'} target='_blank' className='flex flex-col sm:flex-row items-start  group cursor-pointer glossy lg:p-5 rounded-lg drop-shadow-4xl justify-between  gap-[20px]'>
         <div className='md:w-[25%] lg:w-[30%]'>
             <p className='text font-[500]  text-[12px]'>DEC 2020 - JAN 2024 </p>
@@ -41,6 +67,7 @@ function WorkCard() {
         </div>
         
     </Link>
+   </>
   )
 }
 
