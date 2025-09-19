@@ -8,8 +8,8 @@ function BackToTheTime() {
   const [click, handleClick] = useState<boolean>(false);
 
   return (
-   <div className=' duration-1000'>
-     <Image onClick={()=>handleClick((prev)=>!prev)} className="absolute cursor-pointer w-[100px]  mt-[10px] mb-[30px] right-2" src={Light} alt="ligen"/>
+   <div className='fixed bottom-4 right-4 z-50 duration-1000'>
+     <Image onClick={()=>handleClick((prev)=>!prev)} className="cursor-pointer w-[100px]" src={Light} alt="ligen"/>
      {
         click && <Portal click={click} handleClick={handleClick} />
      }

@@ -2,6 +2,12 @@ import { ProjectList } from '@/components/lists/projectList';
 import Link from 'next/link';
 import React from 'react'
 import { GoArrowLeft } from "react-icons/go";
+
+export const metadata = {
+  title: 'Projects',
+  description: 'Explore projects built with Next.js, TypeScript, and more.'
+}
+
 function Page() {
   return (
     <div>

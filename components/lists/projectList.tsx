@@ -39,7 +39,7 @@ if(!isClient)return <div>loading.</div>
             <td className='hidden lg:table-cell space-x-2'>{
                 e.languages.map((e, index) => <Button key={index} title={e} />)
             }</td>
-        <td className='hidden text sm:table-cell group'><div className='flex items-center group-hover:text-teal-300 duration-300 cursor-pointer'>{e.link}<MdOutlineArrowOutward className=' group-hover:translate-y-[-3px] duration-300  group-hover:translate-x-2'/></div></td>
+        <td className='hidden text sm:table-cell group'><div className='flex items-center group-hover:text-teal-300 duration-300 cursor-pointer'><a href={e.link} target='_blank'>{e.link}</a><MdOutlineArrowOutward className=' group-hover:translate-y-[-3px] duration-300  group-hover:translate-x-2'/></div></td>
        </tr>
     ))
    }

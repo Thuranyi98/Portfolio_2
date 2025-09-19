@@ -4,7 +4,7 @@
 
 :root {
   background-color: #10172A;
-  font-family: Inter, sans-serif;
+  font-family: Poppins, Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1;
   --deg: 1;
   --x: -50%;
@@ -38,20 +38,64 @@ html {
 }
 
 .glow {
-  background: #FBFF7A;
-  scale: 4;
+  background: rgba(251, 255, 122, 0.12);
+  scale: 5.2;
   z-index: -1;
   margin: 0 auto;
   border-radius: 50%;
-  box-shadow: inset 0 0 140px 40px #1d377f9d, 0 0 140px 40px #1d377fa0, inset 0 0 270px 270px #1e3c8ecc;
+  box-shadow: inset 0 0 24px 16px rgba(38, 63, 132, 0.35), 0 0 28px 14px rgba(52, 98, 225, 0.25), inset 0 0 60px 40px rgba(43, 95, 239, 0.25);
+  opacity: 1;
 
+}
+
+.firefly {
+  width: 120px;
+  height: 120px;
+  border-radius: 9999px;
+  /* Softer center, long uniform falloff */
+  background: radial-gradient(circle,
+    rgba(120,170,255,0.44) 0%,
+    rgba(120,170,255,0.34) 28%,
+    rgba(120,170,255,0.26) 58%,
+    rgba(120,170,255,0.16) 82%,
+    rgba(120,170,255,0.00) 100%
+  );
+  filter: blur(25.4px);
+  /* Large, soft blue halo */
+  box-shadow:
+    0 0 120px 48px rgba(100, 160, 255, 0.20),
+    0 0 240px 112px rgba(80, 140, 255, 0.10);
+  animation: firefly-pulse 2.4s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.firefly-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  /* Middle slightly brighter but not harsh - blue */
+  background: radial-gradient(circle, rgba(150,190,255,0.72) 0%, rgba(150,190,255,0.26) 70%, rgba(150,190,255,0) 100%);
+  filter: blur(15px);
+  box-shadow: 0 0 46px 20px rgba(140, 180, 255, 0.28);
+}
+
+@keyframes firefly-pulse {
+  0% { transform: scale(0.96); opacity: 0.85; }
+  50% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(0.96); opacity: 0.85; }
 }
 
 .glossy{
 /* From https://css.glass */
 /* From https://css.glass */
- border:1px solid transparent;
- transition: all 0.2s ease-in-out;
+  border:none;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -168,12 +212,11 @@ html {
 
 @media (min-width: 1024px) {
   .glossy:hover {
-    background: rgba(187, 192, 197, 0.04);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.4px);
-    -webkit-backdrop-filter: blur(0.4px);
-    border: 1px solid rgba(187, 192, 197, 0.02);
+    background: rgba(48, 62, 84, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
   }
 
   .div {
@@ -201,6 +244,120 @@ html {
   position: absolute;
   perspective: 500px;
   overflow: hidden;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  /* Enhanced liquid glass */
+ 
+  .glossy:hover {
+    background: rgba(48, 62, 84, 0.14);
+    border-radius: 12px;
+    box-shadow: 0 10px 46px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px) saturate(135%);
+    -webkit-backdrop-filter: blur(12px) saturate(135%);
+  }
+
+  .glossy::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(120px 120px at 55% 45%, rgba(150, 190, 255, 0.28), rgba(150, 190, 255, 0.14) 35%, rgba(150, 190, 255, 0.04) 60%, rgba(150, 190, 255, 0.0) 70%),
+                radial-gradient(220px 160px at 70% 10%, rgba(255,255,255,0.07), rgba(255,255,255,0.00) 60%);
+    filter: blur(18px);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    animation: glossy-float 6s ease-in-out infinite;
+  }
+
+  .glossy:hover::before {
+    opacity: 1;
+  }
+
+  .glossy::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 140%;
+    height: 140%;
+    background: conic-gradient(from 210deg, rgba(255,255,255,0.00) 0deg, rgba(255,255,255,0.08) 18deg, rgba(255,255,255,0.00) 60deg);
+    transform: rotate(2deg);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.5s ease;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .glossy:hover::after {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  @keyframes glossy-float {
+    0% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(2px, -3px, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+}
+
+/* Clients marquee */
+.clients-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.clients-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: clients-marquee 22s linear infinite;
+}
+.clients-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(48,62,84,0.08);
+}
+@keyframes clients-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-track { animation-duration: 0.001ms; animation-iteration-count: 1; }
+}
+
+/* Fade-up animation for grid items */
+.fade-up {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeUp 520ms ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 
