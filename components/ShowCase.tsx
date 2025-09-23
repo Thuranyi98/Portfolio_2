@@ -51,7 +51,7 @@ function ShowCase() {
           ))}
         </div>
         <div className='my-[50px] '>
-          <Link href={'https://read.cv/thuranyi'} target='_blank' className='text-white group flex gap-2 duration-500 items-center cursor-pointer hover:text-teal-300'>View Full Résumé <MdOutlineArrowOutward className=' group-hover:mb-1 group-hover:ml-1' /></Link>
+          <Link href={'/resume'} className='text-white group flex gap-2 duration-500 items-center cursor-pointer hover:text-teal-300'>View Full Résumé <MdOutlineArrowOutward className=' group-hover:mb-1 group-hover:ml-1' /></Link>
         </div>
       </section>
       <section id='Projects' className='pt-[100px]'>
