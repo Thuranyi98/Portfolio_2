@@ -20,6 +20,15 @@ import AWSCerti from '@/public/assets/Certificates/AWS.png'
 import SQLCerti from '@/public/assets/Certificates/SQL.png'
 
 
+// google
+import Google1 from '@/public/assets/Google/google.png'
+import Google2 from '@/public/assets/Google/Screenshot 2025-02-20 at 16.47.23.png'
+import Google3 from '@/public/assets/Google/Screenshot 2025-03-04 at 16.58.50.png'
+import Google4 from '@/public/assets/Google/Screenshot 2025-03-04 at 15.26.57.png'
+import Google5 from '@/public/assets/Google/Screenshot 2025-02-26 at 16.53.48.png'
+import Google6 from '@/public/assets/Google/Screenshot 2025-02-26 at 15.27.28.png'
+import Google7 from '@/public/assets/Google/Screenshot 2025-03-04 at 17.01.50.png'
+
 
 
 
@@ -46,12 +55,24 @@ export const projectsData = [
     },
     {
         id: 2,
+        title: "Google Pixel ( Video Streaming Web )",
+        titleLink: null,
+        description: "Video training management system platform designed to train employees on projects through a video-based learning management system. My role was to develop the video uploading functionality and optimize video playback and upload performance.",
+        image: Google1,
+        images: [Google1, Google2, Google3, Google4, Google5, Google6, Google7],
+        links: null,
+        languages: ["Next.js", "Vidstack", "Zustand","Tailwind", "CI/CD", "PostgreSQL"]
+        
+    },
+    {
+        id: 3,
         title: "Locaboo",
         titleLink: 'http://staging.locaboo.jp/',
         description: "Integrated an AI chatbot for chat and ordering using OpenAI, implementing prompt engineering to define rules and conversation flow. Collaborated on UI development with frontend and backend developers. Hosted Locaboo on AWS with a three-tier architecture, optimizing infrastructure for cost savings, maintenance, and logging.",
         image: Locaboo,
         links: null,
         languages: ["React", "AWS", "OpenAI", "CI/CD", "PostgreSQL", "ASG", "LoadBalancing"]
+       
     },
    
     {
@@ -322,7 +343,8 @@ export const certificatesData = [
         issuer: 'Udemy',
         image: SQLCerti,
         link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-5d1afef3-36dd-4496-bd61-2b8fb0c7ce6a.jpg?v=1755701974000'
-    }
+    },
+
 ]
 
 export const clientsData = [
