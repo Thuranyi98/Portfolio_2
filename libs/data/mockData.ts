@@ -12,6 +12,8 @@ import BonchonLogo from '@/public/assets/BonChonLogo.png'
 import LocabooLogo from '@/public/assets/FlyHigh.png'
 import FMSLogo from '@/public/assets/KyawSan.jpg'
 import DigizenLogo from '@/public/assets/EDUSN.png'
+import MSME from '@/public/assets/msme.png'
+import MSMEImage from '@/public/assets/msmeImage.png'
 
 //certificates images
 import ReactCerti from '@/public/assets/Certificates/React.png'
@@ -52,6 +54,24 @@ export const projectsData = [
             }
         ],
         languages: ["React Native", "Hasura", "PostgreSQL", "FireBase"]
+    },
+    {
+        id: 11,
+        title: "MSME by G3G",
+        titleLink: 'https://apps.apple.com/mm/app/bonchon-myanmar/id6484268092',
+        description: "Empowering local SMEs with a smarter, faster, and more secure way to sell online — for every buyer in Myanmar.",
+        image: MSMEImage,
+        links: [
+            {
+                name: "APP Store",
+                link:"https://apps.apple.com/mm/app/msme-by-g3g/id6746311430"
+            },
+            {
+                name: "Play Store",
+                link:"https://play.google.com/store/apps/details?id=com.application.msmebyg3g&hl=enn"
+            }
+        ],
+        languages: ["React Native", "Expo", "Push Notification", "FireBase"]
     },
     {
         id: 2,
@@ -352,6 +372,7 @@ export const clientsData = [
     { id: 3, name: 'EDUSN - International School Myanmar', image: DigizenLogo },
     { id: 4, name: 'Kyaw San Petrol Co.,Ltd. ', image: FMSLogo },
     { id: 2, name: '株式会社 Fly High', image: LocabooLogo },
+    { id: 5, name: 'MSME by G3G', image: MSME },
 ]
 
 export type GalleryItem = {
