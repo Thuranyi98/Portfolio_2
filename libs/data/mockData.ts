@@ -281,7 +281,7 @@ export const experiencesData = [
     {
         id: 1,
         period: 'SEP 2024 - Presence',
-        title: 'Frontend . Next Innovations ltd',
+        title: 'FullStack Developer . Next Innovations ltd',
         companyLink: 'https://next-innovations.ltd/',
         description: 'Developed and deployed Talent Cloud, a job portal platform, in collaboration with backend developers, designers, and the project manager. Built and managed AWS three-tier architecture with CI/CD pipelines for staging and production, and deployed the company website on AWS Lightsail.',
         links: [
