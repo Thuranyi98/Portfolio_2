@@ -7,7 +7,8 @@ import Joy from '@/public/assets/Joy.png';
 import FMS from '@/public/assets/fuel.png';
 import Promethus from '@/public/assets/promethus.png';
 import Digizen from '@/public/assets/digizen.png';
-import Linn from '@/public/assets/Linn.jpeg';
+import TalentCloud from '@/public/assets/TalentCloud.png';
+import PlaybookOfBurma from '@/public/assets/PlaybookOfBurma.png';
 import BonchonLogo from '@/public/assets/BonChonLogo.png'
 import LocabooLogo from '@/public/assets/FlyHigh.png'
 import FMSLogo from '@/public/assets/KyawSan.jpg'
@@ -129,12 +130,21 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Linn Htet Aung",
-        titleLink: 'https://www.linnhtetaung.com/',
-        description: "Created a portfolio website for designer Linn Htet Aung, focusing on both design and development with engaging animations to showcase his projects and experiences.",
-        image: Linn,
+        title: "Talent Cloud",
+        titleLink: 'https://staging.talent-cloud.asia/',
+        description: "Talent Cloud: A cross-border career infrastructure platform for the AI era that enables talent across Myanmar, Japan, and ASEAN to turn skills and projects into living profiles for international career opportunities.",
+        image: TalentCloud,
         links: null,
-        languages: ["Next.js", "Framer ", "Vercel", "Z.com"]
+        languages: ["Next.js", "TypeScript", "Claude", "Redux"]
+    },
+    {
+        id: 12,
+        title: "Playbook of Burma",
+        titleLink: 'https://play-book-of-burma-git-main-brilliantdevstudio-7215s-projects.vercel.app/',
+        description: "Playbook of Top 1%: A curated platform delivering life-changing playbooks, critical decision-making frameworks, and transformative strategies from Myanmar's leading CEOs, founders, and industry experts.",
+        image: PlaybookOfBurma,
+        links: null,
+        languages: ["Next.js", "TypeScript", "Vercel", "S3", "CloudFront"]
     },
     {
         id: 7,
@@ -190,7 +200,7 @@ export const projectsData = [
         links: null,
         languages: ["React"]
     },
-   
+
 ];
 
 
@@ -281,14 +291,14 @@ export const experiencesData = [
     {
         id: 1,
         period: 'SEP 2024 - Presence',
-        title: 'FullStack Developer . Next Innovations ltd',
+        title: 'Frontend Developer . Next Innovations ltd',
         companyLink: 'https://next-innovations.ltd/',
         description: 'Developed and deployed Talent Cloud, a job portal platform, in collaboration with backend developers, designers, and the project manager. Built and managed AWS three-tier architecture with CI/CD pipelines for staging and production, and deployed the company website on AWS Lightsail.',
         links: [
             { name: 'Locaboo.jp', link: 'http://staging.locaboo.jp/' },
             { name: 'Talent Cloud', link: 'http://staging.talent-cloud.asia/' }
         ],
-        technologies: ['React','Type Script', 'AWS', 'Open AI', 'DevOps']
+        technologies: ['React','Type Script', 'Next.js', 'AWS', 'Open AI', 'DevOps']
     },
     {
         id: 1,
