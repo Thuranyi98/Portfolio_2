@@ -24,20 +24,24 @@ export default function GalleryLightbox({ items, index, onClose, onPrev, onNext 
       >
         <MdClose size={22} />
       </button>
-      <button
-        aria-label='Previous'
-        onClick={onPrev}
-        className='absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white'
-      >
-        <MdChevronLeft size={26} />
-      </button>
-      <button
-        aria-label='Next'
-        onClick={onNext}
-        className='absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white'
-      >
-        <MdChevronRight size={26} />
-      </button>
+      {items.length > 1 && (
+        <>
+          <button
+            aria-label='Previous'
+            onClick={onPrev}
+            className='absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white'
+          >
+            <MdChevronLeft size={26} />
+          </button>
+          <button
+            aria-label='Next'
+            onClick={onNext}
+            className='absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white'
+          >
+            <MdChevronRight size={26} />
+          </button>
+        </>
+      )}
 
       <div className='max-w-[92vw] max-h-[82vh] w-full sm:w-auto glossy rounded-lg overflow-hidden'>
         <div className='relative w-[92vw] sm:w-[76vw] lg:w-[60vw] h-[60vh] sm:h-[70vh]'>
